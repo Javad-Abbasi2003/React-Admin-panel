@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: MyFont;
+  src: url(./Asset/Qs_Iranyekan.ttf);
+}
+* {
+  font-family: MyFont;
+  text-decoration: none;
+}

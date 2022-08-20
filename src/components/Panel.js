@@ -11,7 +11,7 @@ import Charts from "../Asset/charts.svg";
 import LeftArrow from "../Asset/left-arrow.svg";
 
 //Style
-import styles from "./Panel.module.css"
+import styles from "./Panel.module.css";
 
 const Div = styled.div`
   height: 100%;
@@ -25,9 +25,14 @@ const Div = styled.div`
   box-shadow: -15px 0px 40px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-out;
   opacity: ${(props) => props.showPanel ? "1" : "0"};
-`
+`;
 
-const Panel = ({showPanel}) => {
+const Panel = (props) => {
+  const {showPanel, setShowPanel} = props;
+
+  const clickHandler = () => {
+    setShowPanel(false)
+  }
 
   return (
     <Div showPanel={showPanel} >
@@ -39,28 +44,28 @@ const Panel = ({showPanel}) => {
         <h3  className={styles.userName}>جواد عباسی</h3>
       </div>
       <div className={styles.links}>
-        <Link to="/" className={styles.linkDiv}>
+        <Link to="/" className={styles.linkDiv} onClick={clickHandler}>
           <div className={styles.nonArrow}>
             <img className={styles.icons} src={Dashboard} alt="Dash"/>
             <span>داشبورد</span>
           </div>
           <img src={LeftArrow} alt="<" className={styles.arrow}/>
         </Link>
-        <Link to="/" className={styles.linkDiv}>
+        <Link to="/orders" className={styles.linkDiv} onClick={clickHandler}>
           <div className={styles.nonArrow}>
             <img className={styles.icons} src={Orders} alt="Order"/>
             <span>سفارشات</span>
           </div>
           <img src={LeftArrow} alt="<" className={styles.arrow}/>
         </Link>
-        <Link to="/" className={styles.linkDiv}>
+        <Link to="/comments" className={styles.linkDiv} onClick={clickHandler}>
           <div className={styles.nonArrow}>
             <img className={styles.icons} src={Comments} alt="Comment"/>
             <span>نظرات</span>
           </div>
           <img src={LeftArrow} alt="<" className={styles.arrow}/>
         </Link>
-        <Link to="/" className={styles.linkDiv}>
+        <Link to="/charts" className={styles.linkDiv} onClick={clickHandler}>
           <div className={styles.nonArrow}>
             <img className={styles.icons} src={Charts} alt="Chart"/>
             <span>چارت ها</span>

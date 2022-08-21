@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Panel from './components/Panel';
 import Dashboard from './components/Dashboard';
 import HamMenu from './components/styledHamMenu';
+import Orders from "./components/Orders";
 
 function App() {
   const [showPanel, setShowPanel] = useState(false);
@@ -32,7 +33,7 @@ function App() {
         <div className="Routes">
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/orders" element={<h1>Orders</h1>} />
+            <Route path="/orders" element={<Orders />} />
             <Route path="/comments" element={<h1>Comments</h1>} />
             <Route path="/charts" element={<h1>Charts</h1>} />
           </Routes>

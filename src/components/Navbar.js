@@ -14,9 +14,9 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.linksDiv}>
-        <Link to="/">خانه</Link>
-        <Link to="/">فروشگاه</Link>
-        <Link to="/">پشتیبانی</Link>
+        <Link to="#">خانه</Link>
+        <Link to="#">فروشگاه</Link>
+        <Link to="#">پشتیبانی</Link>
       </div>
       <div className={styles.iconsDiv}>
         <div className={styles.chatDiv}>

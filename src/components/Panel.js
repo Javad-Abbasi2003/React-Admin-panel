@@ -14,9 +14,9 @@ import LeftArrow from "../Asset/left-arrow.svg";
 import styles from "./Panel.module.css";
 
 const Div = styled.div`
-  height: 100%;
+  height: 200%;
   position: fixed;
-  right: ${(props) => props.showPanel ? "0" : "-30%"};
+  right: ${(props) => props.showPanel ? "0" : "-80vw"};
   top: 0;
   z-index: 2;
   background-color: #4b4b4b;
@@ -39,9 +39,14 @@ const Panel = (props) => {
       <div className={styles.headerContainer}>
         <h2 className={styles.header}>پنل مدیریت</h2>
       </div>
+      <div className={styles.linksDiv}>
+        <Link to="#" onClick={clickHandler}>خانه</Link>
+        <Link to="#" onClick={clickHandler}>فروشگاه</Link>
+        <Link to="#" onClick={clickHandler}>پشتیبانی</Link>
+      </div>
       <div className={styles.userContainer}>
-        <img src={Profile} alt="Img"  className={styles.userImage} />
-        <h3  className={styles.userName}>جواد عباسی</h3>
+        <img src={Profile} alt="Img" className={styles.userImage} />
+        <h3 className={styles.userName}>جواد عباسی</h3>
       </div>
       <div className={styles.links}>
         <Link to="/" className={styles.linkDiv} onClick={clickHandler}>

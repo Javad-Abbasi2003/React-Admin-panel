@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
+//Component
+import Date from "./Date";
+
 //Assets
 import Profile from "../Asset/Profile.jpg";
 import Dashboard from "../Asset/dashboard.svg";
@@ -14,9 +17,9 @@ import LeftArrow from "../Asset/left-arrow.svg";
 import styles from "./Panel.module.css";
 
 const Div = styled.div`
-  height: 200%;
+  height: calc(100% + 60px);
   position: fixed;
-  right: ${(props) => props.showPanel ? "0" : "-80vw"};
+  right: ${(props) => props.showPanel ? "0" : "-350px"};
   top: 0;
   z-index: 2;
   background-color: #4b4b4b;
@@ -31,7 +34,8 @@ const Panel = (props) => {
   const {showPanel, setShowPanel} = props;
 
   const clickHandler = () => {
-    setShowPanel(false)
+    setShowPanel(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
@@ -77,6 +81,9 @@ const Panel = (props) => {
           </div>
           <img src={LeftArrow} alt="<" className={styles.arrow}/>
         </Link>
+      </div>
+      <div className={styles.date}>
+        <Date />
       </div>
     </Div>
   );

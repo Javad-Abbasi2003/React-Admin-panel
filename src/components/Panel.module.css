@@ -84,7 +84,9 @@
 .arrow {
   height: 12px;
 }
-
+.date {
+  display: none;
+}
 @media (max-width: 768px) {
   .header {
     margin-top: 17px;
@@ -98,5 +100,11 @@
     margin-top: 0;
     padding-top: 15px;
     border-top: 1px solid rgb(115, 115, 115);
+  }
+  .date {
+    position: absolute;
+    right: 30px;
+    top: 86vh;
+    display: flex;
   }
 }

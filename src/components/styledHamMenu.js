@@ -14,7 +14,7 @@ const HamMenu = styled.div`
   border-radius: 5px;
   z-index: 15;
   cursor: pointer;
-  transition: all 0.15s ease-out;
+  transition: all 0.3s ease-out;
   &:hover {
     background-color: #d4d4d4;
   }

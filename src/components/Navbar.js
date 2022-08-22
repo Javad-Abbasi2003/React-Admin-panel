@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Date from "./Date";
 
 //Assets
 import Bell from '../Asset/bell.svg';
@@ -19,6 +20,9 @@ const Navbar = () => {
         <Link to="#">پشتیبانی</Link>
       </div>
       <div className={styles.iconsDiv}>
+        <div className={styles.date}>
+          <Date />
+        </div>
         <div className={styles.chatDiv}>
           <img src={Chat} alt="chat" style={{width: "20px"}} />
           <span>3</span>

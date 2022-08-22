@@ -1,0 +1,37 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  padding: 3px 10px;
+  margin-left: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.secondsDiv {
+  background-color: rgba(70, 223, 0, 0.2);
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.date {
+
+}
+.day {
+
+}
+.clock {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .container {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.9)
+  }
+}

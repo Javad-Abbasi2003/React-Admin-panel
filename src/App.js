@@ -5,10 +5,11 @@ import './App.css';
 
 //Components
 import Navbar from './components/Navbar';
+import HamMenu from './components/styledHamMenu';
 import Panel from './components/Panel';
 import Dashboard from './components/Dashboard';
-import HamMenu from './components/styledHamMenu';
 import Orders from "./components/Orders";
+import Comments from "./components/Comments";
 
 function App() {
   const [showPanel, setShowPanel] = useState(false);
@@ -34,7 +35,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/orders" element={<Orders />} />
-            <Route path="/comments" element={<h1>Comments</h1>} />
+            <Route path="/comments" element={<Comments /> } />
             <Route path="/charts" element={<h1>Charts</h1>} />
           </Routes>
         </div>

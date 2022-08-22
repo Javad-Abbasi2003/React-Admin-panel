@@ -15,7 +15,6 @@
   border-radius: 20px;
   box-shadow: 5px 5px 7px #0000001a,
   -5px -5px 7px #ffffff80;
-  transition: all 0.3s ease-out;
 }
 .ordersTitlesContainer {
   display: flex;
@@ -113,7 +112,4 @@
     text-align: right;
     width: 80px;
   }
-}
-@media (max-width: 500px) {
-  
 }

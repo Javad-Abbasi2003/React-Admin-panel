@@ -6,6 +6,8 @@ import { ordersArray } from "../Asset/ordersArray"
 import styles from "./Orders.module.css"
 
 const Orders = () => {
+  document.title = "Admin Panel - Orders";
+
   return (
     <div className={styles.container}>
       <h1 className={styles.header}>سفارشات</h1>

@@ -6,6 +6,8 @@ import { commentsArray } from "../Asset/commentsArray"
 import styles from "./Comments.module.css";
 
 const Comments = () => {
+  document.title = "Admin Panel - Comments";
+
   return (
     <div className={styles.container}>
       <h1 className={styles.header}>نظرات</h1>

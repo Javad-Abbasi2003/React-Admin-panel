@@ -44,22 +44,33 @@
   flex-direction: row-reverse;
   align-items: center;
 }
+.bellDiv:hover,
+.chatDiv:hover {
+  background-color: #e5e5e5;
+  cursor: pointer;
+}
 .chatDiv {
+  padding: 7px;
+  border-radius: 7px;
   display: flex;
   align-items: center;
-  margin-left: 40px;
+  margin-left: 25px;
   position: relative;
+  transition: all 0.2s ease-out;
 }
 .bellDiv {
+  padding: 7px;
+  border-radius: 7px;
   display: flex;
   align-items: center;
   position: relative;
+  transition: all 0.2s ease-out;
 }
 .chatDiv span,
 .bellDiv span {
   position: absolute;
-  top: -3px;
-  right: -3px;
+  top: 4px;
+  right: 4px;
   display: inline-block;
   background-color: orange;
   font-size: 12px;

@@ -10,6 +10,7 @@ import Panel from './components/Panel';
 import Dashboard from './components/Dashboard';
 import Orders from "./components/Orders";
 import Comments from "./components/Comments";
+import Charts from "./components/Charts";
 
 function App() {
   const [showPanel, setShowPanel] = useState(false);
@@ -17,7 +18,7 @@ function App() {
   const clickHandler = () => {
     setShowPanel(!showPanel);
   }
-  const ofPanelClickHandler = () => {
+  const offPanelClickHandler = () => {
     setShowPanel(false);
   }
 
@@ -29,14 +30,14 @@ function App() {
         <div></div>
       </HamMenu>
       <Panel showPanel={showPanel} setShowPanel={setShowPanel} />
-      <div onClick={ofPanelClickHandler}>
+      <div onClick={offPanelClickHandler}>
         <Navbar/>
         <div className="Routes">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/comments" element={<Comments /> } />
-            <Route path="/charts" element={<h1>Charts</h1>} />
+            <Route path="/charts" element={<Charts />} />
           </Routes>
         </div>
       </div>
